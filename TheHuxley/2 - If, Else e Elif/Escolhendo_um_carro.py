@@ -8,4 +8,19 @@ Caso ele atenda a apenas 1 requisito desejável, imprima a mensagem "Pode ser um
 Caso o carro não atenda nenhum requisito desejável, imprima a mensagem "Recomendo pensar melhor..."'''
 
 
-# Não fiz
+esp = str(input()).upper()
+port = str(input()).upper()
+valor = float(input())
+motor = float(input())
+camb = str(input()).upper()
+
+if esp == 'C' or port == 'P':
+  print('Não compre!')
+elif valor < 100000 and motor >= 1.5 and camb == 'A':
+  print('Pode comprar!')
+elif valor < 100000 and motor >= 1.5 or motor >= 1.5 and camb == 'A' or valor < 100000 and camb == 'A':
+  print('Boa compra.')
+elif valor < 100000 or motor >= 1.5 or camb == 'A':
+  print('Pode ser uma opção.')
+else:
+  print('Recomendo pensar melhor...')
